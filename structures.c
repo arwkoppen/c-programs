@@ -1,7 +1,17 @@
 #include <stdio.h>
 
+struct point makepoint(int x, int y)
+{
+		struct point temp;
+
+		temp.x = x;
+		temp.y = y;
+		return temp;
+}
+
 int main()
 {
+	struct point makepoint(int, int);
 	struct point 
 	{
 		int x,y;
@@ -16,7 +26,8 @@ int main()
 	printf("x: %d y: %d\n", my_point.x, my_point.y);
 	printf("x: %d y: %d\n", another_point.x, another_point.y);
 
-	struct rect {
+	struct rect 
+	{
 		struct point p1;
 		struct point p2;
 	};
@@ -28,5 +39,9 @@ int main()
 	screen.p2.y = 60;
 	printf("x of p1: %d y of p1: %d ; x of p2: %d y of p2: %d\n", screen.p1.x, screen.p1.y, screen.p2.x, screen.p2.y);
 	
+	struct point some_point; 
+	some_point = makepoint(40, 50);
+	printf("x from function :%d y from function: %d\n", some_point.x, some_point.y);
 	return 0;
 }
+
